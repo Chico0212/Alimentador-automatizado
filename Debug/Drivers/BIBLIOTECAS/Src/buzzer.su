@@ -1,0 +1,3 @@
+../Drivers/BIBLIOTECAS/Src/buzzer.c:12:10:PrescaleFrequencia	16	static
+../Drivers/BIBLIOTECAS/Src/buzzer.c:20:6:NoTone	4	static
+../Drivers/BIBLIOTECAS/Src/buzzer.c:25:6:PlayTone	24	static

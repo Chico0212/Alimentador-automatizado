@@ -1,0 +1,2 @@
+../Drivers/BIBLIOTECAS/Src/hcsr04.c:11:6:HCSR04_Read	8	static
+../Drivers/BIBLIOTECAS/Src/hcsr04.c:21:6:delay	16	static
