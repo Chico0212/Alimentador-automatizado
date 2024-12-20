@@ -153,12 +153,14 @@ int main(void)
 	  menu(&total_racao);
 
 	  if (feed) {
-		  ComportaOnOff();
+      HAL_GPIO_WritePin(LED_VERDE_GPIO_Port, LED_VERDE_Pin, GPIO_PIN_SET);
+      if (get_total_racao() > 0)
+		    ComportaOnOff();
 		  HAL_Delay(60);
 		  if (get_total_racao() < 15){
 			  PlayTone(tom, dura, NULL, 10);
 		  }
-		  HAL_GPIO_TogglePin(LED_VERDE_GPIO_Port, LED_VERDE_Pin);
+      HAL_GPIO_WritePin(LED_VERDE_GPIO_Port, LED_VERDE_Pin, GPIO_PIN_RESET);
 
 		  feed = 0;
 	  }
@@ -220,11 +222,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-//
-//void EXTI1_IRQHandler(void)
-//{
-//    HAL_GPIO_EXTI_IRQHandler(BOTAO1_Pin); // Chama o callback registrado
-//}
 
 void menu(int* total_racao) {
 	switch(contador){
@@ -283,14 +280,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	}
 }
 
-
-
-
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 {
 	feed = 1;
-  //verifica o nivel
-  // apita se necessario
 }
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
