@@ -1,6 +1,6 @@
 ![virtus-removebg-preview](https://github.com/user-attachments/assets/87084fa5-825e-49a1-96c2-ad7c03441d86)  
 # Introdução a Sistemas embarcados  
-Alunos: Francisco Bezerra da Silva Neto e Lucas Guilherme
+Alunos: Francisco Bezerra da Silva Neto e Lucas Guilherme da Silva  
 
 ### Documentação atualizada: [Link](https://docs.google.com/document/d/188odcYslumCye3yU5cTpZPQmUy0g13xBBZa_eQfxoBc/edit?usp=sharing)
 
